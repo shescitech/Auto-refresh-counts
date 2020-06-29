@@ -1,0 +1,22 @@
+{
+   "name": "Auto refresh counts",
+   "version": "1.0",
+   "description": "The chrome extension helps to auto refresh particle counts ",
+   "permissions": [""],
+   "background": {
+     "scripts": ["background.js"],
+     "persistent": false
+   },
+   "page_action": {
+     "default_popup": "popup.html"
+   },
+   "content_scripts": [
+     {
+       "matches": ["http://tags.urbansciences.in/*"],
+       "css": ["myStyles.css"],
+       "js": ["contentScript.js"]
+     }
+   ],
+
+   "manifest_version": 2
+ }
